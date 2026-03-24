@@ -1,2 +1,20 @@
-# Balaji-Bakery
-Deployed a production-ready web app for Balaji Bakery using Vite &amp; Vercel. Designed a responsive UI featuring Customer Auth and a secure Owner Portal. This internship project highlights my ability to deliver end-to-end digital solutions that modernize traditional businesses and drive real-world user engagement.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/86d321db-ec77-4784-a43c-c5a262499473
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

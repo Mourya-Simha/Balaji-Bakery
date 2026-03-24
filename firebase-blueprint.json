@@ -1,0 +1,83 @@
+{
+  "entities": {
+    "Cake": {
+      "title": "Cake",
+      "description": "A cake product available in the bakery.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the cake."
+        },
+        "ingredients": {
+          "type": "string",
+          "description": "The ingredients used in the cake."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the cake."
+        },
+        "kgs": {
+          "type": "string",
+          "description": "The weight or quantity of the cake."
+        },
+        "price": {
+          "type": "number",
+          "description": "The price of the cake in INR."
+        },
+        "imageUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of the cake image."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the cake was added."
+        }
+      },
+      "required": ["name", "price", "createdAt"]
+    },
+    "User": {
+      "title": "User",
+      "description": "A user of the application, either a customer or an admin.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The user's email address."
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin", "user"],
+          "description": "The user's role."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The user's display name."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the user was created."
+        }
+      },
+      "required": ["email", "role", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/cakes/{cakeId}": {
+      "schema": {
+        "$ref": "#/entities/Cake"
+      },
+      "description": "Stores all the cakes available in the bakery."
+    },
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/User"
+      },
+      "description": "Stores user profiles and roles."
+    }
+  }
+}
